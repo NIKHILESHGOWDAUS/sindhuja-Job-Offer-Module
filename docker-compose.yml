@@ -5,7 +5,7 @@ services:
     container_name: Employee-application
     build: ./Backend
     ports:
-      - "3209:3209"
+      - "3615:3615"
     depends_on:
       - postgres
     environment:
@@ -23,7 +23,7 @@ services:
     container_name: Employee-application01
     build: ./Employee-application
     ports:
-      - "8017:80"
+      - "8217:80"
     depends_on:
       - backend
     networks:
@@ -33,7 +33,7 @@ services:
     container_name: HR-application
     build: ./HR-application
     ports:
-      - "8018:80"
+      - "8218:80"
     depends_on:
       - backend
     networks:
@@ -43,7 +43,7 @@ services:
     container_name: View-offer
     build: ./View-offer
     ports:
-      - "8019:80"
+      - "8219:80"
     depends_on:
       - backend
     networks:
